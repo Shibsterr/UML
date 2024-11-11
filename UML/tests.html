@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="./" class="logo"><i class="fa-solid fa-diagram-project"></i> UML Diagrammas - Secību un Izvietošanas</a>
+
+        <div class="uml">
+            <a href="index.html" class="btn">Sākumlapa</a>         
+            <a href="sequence.html" class="btn">Secību</a>
+            <a href="deployment.html" class="btn">Izvietošanas</a>
+            <a href="tests.html" class="btn">Tests</a>
+        </div>   
+    </header>
+    <h2>UML Diagrammu tests - Secību un Izvietošanas</h2>
+
+    <form id="quizForm">
+        <!-- Q1 -->
+        <div class="question">
+            <p>1. Kas ir UML izvietošanas diagramma?</p>
+            <label><input type="radio" name="q1" value="a"> Uzvedības modelis</label><br>
+            <label><input type="radio" name="q1" value="b"> Struktūras modelis</label><br>
+            <label><input type="radio" name="q1" value="c"> Process modelis</label><br>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question">
+            <p>2. Kas tiek izmantots, lai norādītu uz sistēmas sastāvdaļu saziņu izvietošanas diagrammā?</p>
+            <label><input type="radio" name="q2" value="a"> Mezgli un komunikācijas savienojumi</label><br>
+            <label><input type="radio" name="q2" value="b"> Notikumu diagrammas</label><br>
+            <label><input type="radio" name="q2" value="c"> Dzīvības līnijas un aktivizācija</label><br>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question">
+            <p>3. Kādu lomu spēlē "aktieris" secību diagrammā?</p>
+            <label><input type="radio" name="q3" value="a"> Parāda mezgla uzvedību</label><br>
+            <label><input type="radio" name="q3" value="b"> Pārstāv lomu, kas mijiedarbojas ar sistēmu</label><br>
+            <label><input type="radio" name="q3" value="c"> Apzīmē sistēmas dzīves ciklu</label><br>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question">
+            <p>4. Kas raksturo "dzīvības līniju" secību diagrammā?</p>
+            <label><input type="radio" name="q4" value="a"> Sistēmas komponentu sakārtojums</label><br>
+            <label><input type="radio" name="q4" value="b"> Periods, kurā elements veic darbību</label><br>
+            <label><input type="radio" name="q4" value="c"> Mijiedarbības dalībnieks ar laika dimensiju</label><br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Iesniegt</button>
+    </form>
+
+    <p id="result" class="result"></p>
+
+    <script>
+        function checkAnswers() {
+
+            // ja pieliek jaunu jautājmu pieraksti qnumurs un tad atbilde (a,b,c or d)
+            const correctAnswers = {    
+                q1: "b",
+                q2: "a",
+                q3: "b",
+                q4: "c"
+            };
+
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+
+            
+            for (let question in correctAnswers) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedOption && selectedOption.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `Jūsu rezultāts ir: ${score} no ${totalQuestions}.`;
+            if (score < totalQuestions) {
+                resultElement.classList.add("incorrect");
+                resultElement.innerHTML += " Lūdzu mēģiniet vēlreiz.";
+            } else {
+                resultElement.classList.remove("incorrect");
+            }
+        }
+    </script>
+
+</body>
+</html>

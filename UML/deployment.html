@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izvietošanas diagrammas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="./" class="logo"><i class="fa-solid fa-diagram-project"></i> UML Diagrammas - Secību un Izvietošanas</a>
+
+        <div class="uml">
+            <a href="index.html" class="btn">Sākumlapa</a>         
+            <a href="sequence.html" class="btn">Secība</a>
+            <a href="deployment.html" class="btn">Izvietošanas</a>
+            <a href="tests.html" class="btn">Tests</a>
+        </div>   
+    </header>
+    <!-- <p>Katrai UML diagrammai izklāstīt:
+        vai tā ir struktūras (structure) vai uzvedības (behavior) modeļa daļa?
+        kas tā ir un kādam mērķim paredzēta?
+        kādu problēmu tā risina un kādās situācijās to izmanto?
+        kādas ir galvenās diagrammas pamatdaļas, elementi, izmantotie simboli?
+        Izveidot divus piemērus katrai no UML diagrammām (saistībā ar tīmekļa tehnoloģiju projektiem). Kopā 4 piemēri.</p> -->
+
+        <!-- <p>https://www.lucidchart.com/pages/uml-deployment-diagram <br>
+            https://creately.com/guides/deployment-diagram-tutorial/ <br>
+            https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-deployment-diagram/ <br>
+
+
+            https://online.visual-paradigm.com/diagrams/tutorials/deployment-diagram-tutorial/
+            https://online.visual-paradigm.com/app/diagrams/#diagram:proj=0&type=DeploymentDiagram&width=11&height=8.5&unit=inch
+            
+        </p> -->
+        <!-- https://www.geeksforgeeks.org/deployment-diagram-unified-modeling-languageuml/#:~:text=Use-,Cases%20of%20Deployment%20Diagrams,-Below%20are%20the 
+         https://www.lucidchart.com/pages/what-is-UML-unified-modeling-language#:~:text=the%20relevant%20relationships.-,DEPLOYMENT%20DIAGRAMS,-A%20deployment%20diagram-->
+
+        <h1>Izvietošanas diagramma</h1>
+            <p class="model">Struktūras modelis</p>
+            <p>Attēlo fizisko arhitektūru un komponentu izvietojumu</p>
+        <h2>Kas tā ir? Kādam mērķim paredzēta?</h2>
+            <p>Izvietošanas diagramma attēlo fizisko struktūru, kas ietver mezglus (datorus, serverus utt.) un komponentus, kas tajos atrodas</p>
+            <p>Tās mērķis ir parādīt, kā programmatūras elementi ir izvietoti fiziskajā vidē</p>
+        <h2>Kādas problēmas risina tā risina? Kādās situācijās to izmanto?</h2>
+            <p>Parādīt, kuri programmatūras elementi tiek izvietoti ar 
+            kuriem aparatūras elementiem<br>
+            Ilustrēt aparatūras darbības laika apstrādi<br>
+            Sniegt pārskatu par aparatūras sistēmas topoloģiju</p>
+        <h2>Galvenās pamatdaļas, elementi, simboli</h2>
+        <table>
+            <tr>
+                <th>Notācija un Apraksts</th>
+                <th>Vizuālā reprezentācija</th>
+            </tr>
+            <tr>
+                <td><div class="title">Mezgls (Node)</div>
+                    <p>Aparatūras vai programmatūras objekts</p>
+                    <p>Mezgli ir elementi, kas pārstāv sistēmas skaitļošanas resursus, piemēram, personālos datorus, sensorus, drukas ierīces vai serverus</p>
+                    <p class="description">Attēlota kā trīsdimensiju kaste. Mezgli var ietvert arī ligzdotus mezglus, lai attēlotu hierarhiskas struktūras</p>
+                </td>
+                <td><img src="Images/Deployment/node.png"></td>
+            </tr>
+            <tr>
+                <!--  -->
+                <td><div class="title">Artefakts (Artifact)</div>
+                    <p>Pārstāv fiziskus elementus programmatūras sistēmā</p>
+                    <p>Artefakti pārstāv fiziskus ieviešanas vienumus, piemēram, izpildāmus failus, bibliotēkas, programmatūras komponentes, dokumentus, konfigurācijas failus, pirmkoda failus un datubāzes. Artefakti var ietvert arī papildu informāciju, piemēram, failu paplašinājumus vai versijas</p>
+                    <p class="description">Attēlots ar taisnstūri, kurā ir nosaukums un vārds "artefakts", ietverts dubultās bultās </p>
+                </td>
+                <td><img src="Images/Deployment/artifact.png"></td>
+            </tr>
+            <tr>
+                <td><div class="title">Interfeiss (Interface)</div>
+                    <p>Aplis, kas norāda līgumisku attiecību. Objekti, kas realizē interfeisu, ir pakļauti noteiktām saistībām</p>
+                    <!-- <p>Interfeiss definē līgumu, kurā norādītas metodes vai darbības, kas komponentam jāīsteno. Tas atspoguļo dažādu komponentu vai apakšsistēmu mijiedarbības punktu</p> -->
+                    <p class="description">Attēlots kā aplis vai elipse, uz kā ir saskarnes nosaukums. Saskarnes var ietvert arī nodrošinātās un nepieciešamās saskarnes, kas apzīmētas attiecīgi ar "+" un "-" simboliem</p> 
+                    <!-- saskarnes check +/- -->
+                </td>
+                <td><img src="Images/Deployment/inter.png"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="title">Komponents (Component)</div>
+                    <p>Apzīmē programmatūras elementu</p>
+                    <p>Parasti tiek ieviesta kā programmatūras modulis, klase vai pakotne</p>
+                    <p>Tas iekapsulē savu uzvedību un datus, un to var izvietot neatkarīgi</p>
+                    <p class="description"> Attēlots kā taisnstūris ar divām cilnēm (mazākiem taisnstūriem). Komponenta nosaukums ir ierakstīts taisnstūra iekšpusē</p>
+                </td>
+                <td><img src="Images/Deployment/comp.png"></td>
+            </tr>
+            <tr>
+                <td><div class="title">Asociācija (Association)</div>
+                    <p>Līnija, kas norāda uz ziņojumu vai citu komunikācijas veidu starp mezgliem</p>
+                </td>
+                <td><img src="Images/Deployment/ass.png"></td>
+            </tr>
+            <tr>
+                <td><div class="title">Atkarība (Dependency)</div>
+                    <p>Punktota līnija, kas beidzas ar bultiņu, norādot, ka viens mezgls vai komponente ir atkarīga no citas</p>
+                </td>
+                <td><img src="Images/Deployment/dep.png"></td>
+            </tr>
+
+            <tr>
+                <td><div class="title">Datubāze (Database)</div>
+                    <p>Datubāzes atspoguļo visus datus, ko glabā izvietotā sistēma</p>
+                    <p class="description">Dažkārt datubāze tiek attēlota attēlota tikai kā vēl viens mezgls, bet dažkārt tā tiek attēlota kā cilindrs</p>
+                </td>
+                <td><img src="Images/Deployment/db.png"></td>
+            </tr>
+            <tr>
+                <td><div class="title">Paka (Package)</div>
+                    <p>Faila formas lodziņš, kurā ir apkopoti visi ierīces mezgli, lai iekapsulētu visu izvietošanu</p>
+                </td>
+                <td><img src="Images/Deployment/paka.png"></td>
+            </tr>
+
+            <tr>
+                <td><div class="title">Mezgls kā konteiners (Node as container)</div>
+                    <p>Mezgls, kurā ietverts cits mezgls, piemēram, kur mezglos ir iekļautas komponentes</p>
+                </td>
+                <td><img src="Images/Deployment/boxcomp.png"></td>   
+            </tr>
+            <tr>
+                <td><div class="title">Stereotips (Stereotype)</div>
+                    <p>Ierīce, kas atrodas mezglā un ir attēlota mezgla augšpusē (ikona), ar nosaukumu, kas ietverts dubultās bultās</p>
+                </td>
+                <td><img src="Images/Deployment/stero.png"></td>
+            </tr>
+        </table>
+        <h2>Piemēri</h2>
+
+        <!-- Izvietošanas diagrammas palīdz:
+
+        Saprast sistēmas arhitektūru: Sniedz skaidru priekšstatu par to, kā komponenti ir izvietoti un kā tie mijiedarbojas.
+        Identificēt resursus: Palīdz noteikt, kuri resursi ir nepieciešami, lai palaistu sistēmu.
+        Plānot izvietošanu: Sniedz informāciju par to, kā un kur programmatūra tiks izvietota.
+        Situācijas, kad tās tiek izmantotas:
+
+        Sistēmas izstrādes plānošana.
+        Izvietošanas un resursu pārvaldība.
+        Datu centru un serveru infrastruktūras izstrāde. 
+        
+
+        Deployment Diagrams are used to represent system hardware and its software. It tells us what hardware components exist and what software components run on them.
+
+        We illustrate system architecture as distribution of software artifacts over distributed targets.
+        An artifact is the information that is generated by system software.
+        They are primarily used when a software is being used, distributed or deployed over multiple machines with different configurations.
+        -->
+</body>
+</html>
