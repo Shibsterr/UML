@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Izvietošanas diagrammas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Images/diagram-project.png" type="images/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Images/diagram.png" type="image/icon type">
 </head>
 <body>
     <header>
@@ -37,17 +39,17 @@
         <!-- https://www.geeksforgeeks.org/deployment-diagram-unified-modeling-languageuml/#:~:text=Use-,Cases%20of%20Deployment%20Diagrams,-Below%20are%20the 
          https://www.lucidchart.com/pages/what-is-UML-unified-modeling-language#:~:text=the%20relevant%20relationships.-,DEPLOYMENT%20DIAGRAMS,-A%20deployment%20diagram-->
 
-        <h1>Izvietošanas diagrammas</h1>
-        <p class="model">Struktūras modelis.</p>
-        <p>Attēlo fizisko arhitektūru un komponentu izvietojumu</p>
+        <h1><i class="fas fa-server"></i> Izvietošanas diagramma</h1>
+        <p class="model">Struktūras modeļa daļa</p>
+        <p>Attēlo fizisko arhitektūru un komponentu izvietojumu.</p>
         <h2>Kas tā ir? Kādam mērķim paredzēta?</h2>
-            <p>Izvietošanas diagramma attēlo fizisko struktūru, kas ietver mezglus (datorus, serverus utt.) un komponentus, kas tajos atrodas</p>
-            <p>Tās mērķis ir parādīt, kā programmatūras elementi ir izvietoti fiziskajā vidē</p>
+            <p>Izvietošanas diagramma attēlo fizisko struktūru, kas ietver mezglus (datorus, serverus utt.) un komponentus, kas tajos atrodas.</p>
+            <p>Tās mērķis ir parādīt, kā programmatūras elementi ir izvietoti fiziskajā vidē.</p>
         <h2>Kādas problēmas risina tā risina? Kādās situācijās to izmanto?</h2>
             <p>Parādīt, kuri programmatūras elementi tiek izvietoti ar 
-            kuriem aparatūras elementiem<br>
-            Ilustrēt aparatūras darbības laika apstrādi<br>
-            Sniegt pārskatu par aparatūras sistēmas topoloģiju</p>
+            kuriem aparatūras elementiem.<br>
+            Ilustrēt aparatūras darbības laika apstrādi.<br>
+            Sniegt pārskatu par aparatūras sistēmas topoloģiju.</p>
         <h2>Galvenās pamatdaļas, elementi, simboli</h2>
         <table>
             <tr>
@@ -73,7 +75,7 @@
             </tr>
             <tr>
                 <td><div class="title">Interfeiss (Interface)</div>
-                    <p>Aplis, kas norāda līgumisku attiecību. Objekti, kas realizē interfeisu, ir pakļauti noteiktām saistībām</p>
+                    <p>Aplis, kas norāda līgumisku attiecību, ko objekts realizē vai pieprasa. Objekti, kas realizē interfeisu, ir pakļauti noteiktām saistībām</p>
                     <!-- <p>Interfeiss definē līgumu, kurā norādītas metodes vai darbības, kas komponentam jāīsteno. Tas atspoguļo dažādu komponentu vai apakšsistēmu mijiedarbības punktu</p> -->
                     <p class="description">Attēlots kā aplis vai elipse, uz kā ir saskarnes nosaukums. Saskarnes var ietvert arī nodrošinātās un nepieciešamās saskarnes, kas apzīmētas attiecīgi ar "+" un "-" simboliem</p> 
                     <!-- saskarnes check +/- -->
@@ -86,19 +88,21 @@
                     <p>Apzīmē programmatūras elementu</p>
                     <p>Parasti tiek ieviesta kā programmatūras modulis, klase vai pakotne</p>
                     <p>Tas iekapsulē savu uzvedību un datus, un to var izvietot neatkarīgi</p>
-                    <p class="description"> Attēlots kā taisnstūris ar divām cilnēm (mazākiem taisnstūriem). Komponenta nosaukums ir ierakstīts taisnstūra iekšpusē</p>
+                    <p class="description"> Attēlots kā taisnstūris ar divām cilnēm (mazākiem taisnstūriem), nosaukums ir rakstīts iekšpusē</p>
                 </td>
                 <td><img src="Images/Deployment/comp.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Asociācija (Association)</div>
                     <p>Līnija, kas norāda uz ziņojumu vai citu komunikācijas veidu starp mezgliem</p>
+                    <p class="description">Attēlota kā taisna līnija starp diviem mezgliem</p>
                 </td>
                 <td><img src="Images/Deployment/ass.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Atkarība (Dependency)</div>
-                    <p>Punktota līnija, kas beidzas ar bultiņu, norādot, ka viens mezgls vai komponente ir atkarīga no citas</p>
+                    <p>Attēlo, ka viens mezgls vai komponente ir atkarīga no citas</p>
+                    <p class="description">Attēlota kā punktota līnija, kas beidzas ar bultiņu, norādot atkarības virzienu</p>
                 </td>
                 <td><img src="Images/Deployment/dep.png"></td>
             </tr>
@@ -106,26 +110,28 @@
             <tr>
                 <td><div class="title">Datubāze (Database)</div>
                     <p>Datubāzes atspoguļo visus datus, ko glabā izvietotā sistēma</p>
-                    <p class="description">Dažkārt datubāze tiek attēlota attēlota tikai kā vēl viens mezgls, bet dažkārt tā tiek attēlota kā cilindrs</p>
+                    <p class="description">Dažkārt datubāze tiek attēlota kā vēl viens mezgls, bet dažkārt tā tiek attēlota kā cilindrs</p>
                 </td>
                 <td><img src="Images/Deployment/db.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Paka (Package)</div>
-                    <p>Faila formas lodziņš, kurā ir apkopoti visi ierīces mezgli, lai iekapsulētu visu izvietošanu</p>
+                    <p>Attēlo elementu kopu, kas tiek organizēta kopā, piemēram faili vai mezgli</p>
+                    <p class="description">Attēlota kā taisnstūris ar cilni, kurā ir elementi</p>
                 </td>
                 <td><img src="Images/Deployment/paka.png"></td>
             </tr>
 
             <tr>
                 <td><div class="title">Mezgls kā konteiners (Node as container)</div>
-                    <p>Mezgls, kurā ietverts cits mezgls, piemēram, kur mezglos ir iekļautas komponentes</p>
+                    <p>Mezgls, kurā ietverts cits mezgls vai komponente, lai norādītu hierarhisku struktūru</p>
                 </td>
                 <td><img src="Images/Deployment/boxass.png"></td>   
             </tr>
             <tr>
                 <td><div class="title">Stereotips (Stereotype)</div>
-                    <p>Ierīce, kas atrodas mezglā un ir attēlota mezgla augšpusē (ikona), ar nosaukumu, kas ietverts dubultās bultās</p>
+                    <p>Norāda specifisku lomu vai funkciju, atrodas mezglā</p>
+                    <p class="description">Attēlots mezgla augšpusē (ikona), ar nosaukumu, kas ietverts dubultās bultās</p>
                 </td>
                 <td><img src="Images/Deployment/stero.png"></td>
             </tr>
@@ -140,7 +146,7 @@
         
         <div class="examp">
             <h2>2. Bankas aplikācija</h2>
-            <img src="Images/Deployment/2_deploy_dia.jpg"></img>
+            <img src="Images/Deployment/2_deployment_dia.png"></img>
         </div>
 
         <!-- Izvietošanas diagrammas palīdz:

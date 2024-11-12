@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secību diagrammas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Images/diagram-project.png" type="images/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Images/diagram.png" type="image/icon type">
 </head>
 <body>
     <header>
@@ -27,20 +29,20 @@
 
         <!-- <p>https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-sequence-diagram/</p> -->
 
-        <h1>Secību diagramma</h1>
-            <p class="model">Uzvedības modelis</p>
-            <p>Fokusējas uz to, kā objekti savstarpēji mijiedarbojas laika gaitā</p>
+        <h1><i class="fa-solid fa-random"></i> Secību diagramma</h1>
+            <p class="model">Uzvedības modeļa daļa</p>
+            <p>Fokusējas uz to, kā objekti savstarpēji mijiedarbojas laika gaitā.</p>
         <h2>Kas tā ir? Kādam mērķim paredzēta?</h2>
-            <p>Secību diagramma attēlo objektu mijiedarbību laikā, uzsverot secību un notikumu kārtību</p>
-                <p>To var raksturot kā notikumu diagrammu</p>
-                <p>Tā koncentrējas uz to, kā objekti laika gaitā sazinās viens ar otru, padarot to par būtisku rīku dinamiskas uzvedības modelēšanai sistēmā</p>
-                <p>Secību diagrammas ilustrē objektu mijiedarbību, ziņojumu plūsmas un darbību secību, padarot tās vērtīgas lietošanas gadījumu izpratnei, sistēmas arhitektūras projektēšanai un sarežģītu procesu dokumentēšanai</p>
-            <p>Tās mērķis ir, lai dokumentētu un izprastu prasības jaunām un esošajām sistēmām un parādītu, kā notiek komunikācija starp objektiem, iekļaujot ziņojumu apmaiņu, laiku un secību</p>
-        <h2>Kādas problēmas risina tā risina? Kādās situācijās to izmanto?</h2>
-            <p>Parāda, vai objekti ir savienoti pareizajā secībā un vai ziņojumi tiek nosūtīti pareizajā laikā <br>
-            Sniedz priekšstatu par to, kā sistēma funkcionē <br>
-            Diagramma var palīdzēt izstrādātājiem un klientiem pārliecināties, ka prasības tiek saprastas vienādi <br>
-            To izmanto, lai izprastu prasības jaunai sistēmai, to izstrādātu vai dokumentētu esošu procesu, uzlabotu esošu sistēmu un funkcionalitātes analīzei</p>
+            <p>Secību diagramma attēlo objektu mijiedarbību laikā, uzsverot secību un notikumu kārtību.</p>
+                <p><i>To var raksturot kā notikumu diagrammu.</i></p>
+                <p>Tā koncentrējas uz to, kā objekti laika gaitā sazinās viens ar otru, padarot to par būtisku rīku dinamiskas uzvedības modelēšanai sistēmā.</p>
+                <p>Secību diagrammas ilustrē objektu mijiedarbību, ziņojumu plūsmas un darbību secību, padarot tās vērtīgas lietošanas gadījumu izpratnei, sistēmas arhitektūras projektēšanai un sarežģītu procesu dokumentēšanai.</p>
+            <p>Tās mērķis ir, lai dokumentētu un izprastu prasības jaunām un esošajām sistēmām un parādītu, kā notiek komunikācija starp objektiem, iekļaujot ziņojumu apmaiņu, laiku un secību.</p>
+        <h2>Kādas problēmas tā risina? Kādās situācijās to izmanto?</h2>
+            <p>Tā parāda, vai objekti ir savienoti pareizajā secībā un vai ziņojumi tiek nosūtīti pareizajā laikā.<br>
+            Sniedz priekšstatu par to, kā sistēma funkcionē.<br>
+            Diagramma var palīdzēt izstrādātājiem un klientiem pārliecināties, ka prasības tiek saprastas vienādi.<br>
+            To izmanto, lai izprastu prasības jaunai sistēmai, to izstrādātu vai dokumentētu esošu procesu, uzlabotu esošu sistēmu un funkcionalitātes analīzei.</p>
         <h2>Galvenās pamatdaļas, elementi, simboli</h2>
         <table>
             <tr>
@@ -50,81 +52,94 @@
             <tr>
                 <td>
                     <div class="title">Aktieris (Actor)</div>
-                <p>Lomas veids, ko spēlē subjekts, kas mijiedarbojas ar subjektu (piemēram, apmainoties ar signāliem un datiem). <br>
-                    Pārstāv lietotāja, ārējās aparatūras vai citu subjektu lomas.<br>
-                    - Aktieris ne vienmēr pārstāv konkrētu fizisku subjektu, bet tikai kāda subjekta konkrētu <br>
-                    - Persona var spēlēt vairāku dažādu aktoru lomu, un, otrādi, konkrēto aktoru var spēlēt vairākas dažādas personas.</p>
+                <p>Lomas veids, ko spēlē subjekts, kas mijiedarbojas ar subjektu (piemēram, apmainoties ar signāliem un datiem) <br>
+                    Pārstāv lietotāja, ārējās aparatūras vai citu subjektu lomas<br>
+                </p>
+                    <p class="description">Persona var spēlēt vairāku dažādu aktieru lomu, un, otrādi, konkrēto aktieri var spēlēt vairākas dažādas personas</p>
                 </td>
-                <td><img style="height: 10rem;" src="Images/Sequence/Aktieris.png"></td>
+                <td><img src="Images/Sequence/Aktieris.png"></td>
             </tr>
             <tr>
-                <td><div class="title">Lifeline</div>
-                <p>Dzīvības līnija ir individuāls mijiedarbības dalībnieks.</p></td>
+                <td>
+                    <div class="title">Lifeline</div>
+                    <p>Attēlo individuālu dalībnieku secības diagrammā</p>
+                    <p class="description">Attēlots kā taisnstūris ar dalībnieka vārdu, no kura apakšas uz leju stiepjas raustīta līnija</p>
+                </td>
                 <td><img src="Images/Sequence/lifeline.png"></td>
             </tr>
             <tr>
-                <td><div class="title">Aktivizācijas (Activation)</div>
-                <p> - Plāns taisnstūris uz dzīvības līnijas apzīmē periodu, kurā elements veic kādu darbību.<br>
-                    - Taisnstūra augšējā un apakšējā daļa ir saskaņota attiecīgi ar darbības uzsākšanas un pabeigšanas laiku.</p></td>
+                <td><div class="title">Aktivizācija (Activation)</div>
+                    <p>Norāda periodu, kad objekts vai komponents ir aktīvs, izpildot noteiktu darbību</p>
+                    <p class="description">Attēlots kā šaurs taisnstūris uz dzīvības līnijas; augšdaļa un apakšdaļa atbilst darbības sākumam un beigām</p>
+                </td>
                 <td><img src="Images/Sequence/aktiv.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Zvanu ziņojums (Call Message)</div>
-                <p>- Ziņojums definē konkrētu saziņu starp mijiedarbības dzīvības līnijām.  <br>
-                    - Izsaukuma ziņojums ir ziņojuma veids, kas atspoguļo mērķa dzīvības līnijas darbības izsaukumu.</p></td>
+                    <p>Attēlo ziņu, ko viens dalībnieks nosūta otram, lai izsauktu darbību</p>
+                    <p class="description">Attēlots kā līnija ar aizpildītu bultiņu, kas norāda saņēmēju</p>
+                </td>
                 <td><img src="Images/Sequence/callmsg.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Atgriezeniskā ziņa (Return Message)</div>
-                <p>- Ziņojums definē konkrētu saziņu starp mijiedarbības dzīvības līnijām. <br>
-                    - Atgriezeniskais ziņojums ir ziņojuma veids, kas atspoguļo informācijas nodošanu atpakaļ atbilstošā iepriekšējā ziņojuma izsaucējam.</p></td>
+                    <p>Parāda atbildi uz iepriekšējo izsaukumu.</p>
+                    <p class="description">Attēlots kā raustīta līnija ar neaizpildītu bultiņu, kas norāda atpakaļ uz izsaucēju</p>
+                </td>
                 <td><img src="Images/Sequence/returnmsg.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Pašiniciatīvas ziņojums (Self Message)</div>
-                <p>- Ziņojums definē konkrētu saziņu starp mijiedarbības dzīvības līnijām. <br>
-                    - Pašziņojums ir ziņojuma veids, kas atspoguļo tās pašas dzīvības līnijas ziņojuma izsaukumu.</p></td>
+                    <p>Norāda uz darbību, ko objekts izsauc pats sev</p>
+                    <p class="description">Attēlots kā līkne, kas atgriežas pie tās pašas dzīvības līnijas</p>
+                </td>
                 <td><img src="Images/Sequence/self.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Rekursīvā ziņa (Recursive Message)</div>
-                    <p>- Ziņojums definē konkrētu saziņu starp mijiedarbības dzīvības līnijām. <br>
-                    - Rekursīvs ziņojums ir ziņojuma veids, kas atspoguļo vienas un tās pašas dzīveslīnijas ziņojuma izsaukumu. Tā mērķis norāda uz aktivizāciju, kas atrodas virs aktivizācijas, no kuras ziņojums tika izsaukts.</p></td>
+                    <p>Attēlo izsaukumu pašam sev, bet ar mērķi atkārtoti aktivizēt to pašu objektu</p>
+                    <p class="description">Attēlots kā pašiniciatīvas ziņojums, kas atkārtojas uz jaunas aktivizācijas</p>
+                </td>
                 <td><img src="Images/Sequence/recursive.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Izveidot ziņojumu (Create Message)</div>
-                    <p>- Ziņojums definē konkrētu saziņu starp mijiedarbības dzīvības līnijām. <br>
-                    - Create message ir ziņojuma veids, kas atspoguļo (mērķa) dzīvības līnijas instancēšanu. </p></td>
+                    <p>Norāda jauna objekta vai komponenta izveidi secības laikā</p>
+                    <p class="description">Attēlots kā līnija ar neaizpildītu bultiņu, kas norāda uz jaunu dzīvības līniju</p>
+                </td>
                 <td><img src="Images/Sequence/createmsg.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Iznīcināt ziņojumu (Destroy Message)</div>
-                <p>- Ziņojums definē konkrētu saziņu starp mijiedarbības dzīvības līnijām. <br>
-                    - Iznīcināšanas ziņojums ir ziņojuma veids, kas atspoguļo pieprasījumu iznīcināt mērķa dzīves ciklu.</p></td>
+                    <p>Norāda objekta dzīves cikla beigas, pieprasot tā iznīcināšanu</p>
+                    <p class="description">Attēlots kā līnija ar aizpildītu bultiņu, kas norāda uz mērķa dzīvības līniju, kura beidzas ar "X"</p>
+                </td>
                 <td><img src="Images/Sequence/destroymsg.png"></td>
             </tr>
             <tr>
-                <td><div class="title">Ilgums Ziņojums (Duration Message)</div> 
-                    <p>- Ziņojums definē konkrētu saziņu starp mijiedarbības dzīvības līnijām. <br>
-                    - Ilguma ziņojums parāda attālumu starp diviem ziņojuma izsaukuma laika momentiem.</p></td>
+                <td><div class="title">Ilguma Ziņojums (Duration Message)</div> 
+                    <p>Attēlo laika attālumu starp divām darbībām vai izsaukumiem</p>
+                    <p class="description">Attēlots kā līnija, kas savieno divus laika punktus uz dažādām dzīvības līnijām</p>
+                </td>
                 <td><img src="Images/Sequence/durmsg.png"></td>
             </tr>
             <tr>
                 <td><div class="title">Piezīme (Note)</div>
-                <p>Piezīme (komentārs) ļauj pievienot elementiem dažādas piezīmes. Piezīmei nav semantiska spēka, bet tā var saturēt informāciju, kas ir noderīga modelētājam.</p></td>
-                <td><img style="height: 7rem;" src="Images/Sequence/note.png"></td>
+                    <p>Pievieno komentārus vai papildus informāciju diagrammai</p>
+                    <p class="description">Attēlots kā taisnstūris ar atlocītu stūri</p>
+                </td>
+                <td><img src="Images/Sequence/note.png"></td>
             </tr>
         </table>
-        <h2>Piemēri (2)</h2>
+        <h2>Piemēri</h2>
     
         <div class="examp">
-            <h2>1. Ielogošanās sistēma</h2>
+            <h2>Ielogošanās sistēma</h2>
             <img src="Images/Sequence/1_sequence_dia.png"></img>
         </div>
         
         <div class="examp">
-            <h2>2. Ielogošanās sistēma ar vairākiem serveriem</h2>
+            <h2>Lietotāja autentifikācija</h2>
             <img src="Images/Sequence/2_sequence_dia.png"></img>
         </div>
         <!-- Mērķis: -->
