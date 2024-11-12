@@ -163,6 +163,20 @@ button {
     margin: 20px auto;
  }
 
+
+.examp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.examp img{
+    width: 50%;
+    height: 50%;
+}
+
+
 @media (max-width: 768px) {
     header {
         padding: 1rem 5%;
